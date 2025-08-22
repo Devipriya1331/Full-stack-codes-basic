@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <table>
+    <tr>
+        
+           <td > <h2 id="h1">Dhoni</h2></td>
+           <td><p id="p1">0</p></td>
+    </tr>
+    <tr>
+        <td><h2 id="h2">Virat </h2></td>
+        <td><p id="p2"> 0</p></td>
+    </tr>
+    <tr>
+        <td><button id="b1">Dhoni</button></td>
+        <td><button id="b2">Virat</button></td>
+    </tr>
+    </table>
+
+<style>
+    button{
+        background-color: rgb(154, 141, 166);
+        border-radius: 3px;
+        color: #fff;
+        height: 30px;
+        width: 70px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+   *{
+    background-color: rgb(228, 228, 230);
+   }
+   p{
+    font-size: larger;
+   }
+</style>
+
+
+<script>
+    let r1=0;
+    let r2=0
+    
+    document.getElementById("b1").onclick=function(){
+        r1=r1+1
+        document.getElementById("p1").innerHTML=r1
+        updateScore()
+    }
+document.getElementById('b2').onclick=function(){
+    r2=r2+1
+    document.getElementById('p2').innerHTML=r2
+    updateScore()
+}
+function updateScore(){
+    if(r2>r1){
+    document.getElementById('h1').innerHTML="Virat"
+    document.getElementById('p1').innerHTML=r2
+    document.getElementById('h2').innerHTML="Dhoni"
+    document.getElementById('p2').innerHTML=r1
+    }
+    else{
+    document.getElementById('h1').innerHTML="Dhoni"
+    document.getElementById('p1').innerHTML=r1
+    document.getElementById('h2').innerHTML="Virat"
+    document.getElementById('p2').innerHTML=r2
+    }
+}
+
+</script>
+
+
+</body>
+</html>
